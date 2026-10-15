@@ -2391,6 +2391,8 @@ function blogStage(r){
     if ((r.topic_approved || r.deliverable === 'linkedin_article') && !r.approved) return { cls:'b-writing', label:'Being written' };
     return null;
   }
+  // One-off (Jhen 15/10/2026): a blog written in Google Docs is ready for QC once its doc is linked.
+  if (!a && r.stream === 'blog' && r.doc_url && r.topic_approved && !r.approved) return { cls:'b-qc', label:'Ready for QC' };
   if (!a) return (r.topic_approved || r.deliverable === 'linkedin_article') && !r.approved ? { cls:'b-writing', label:'Writing' } : null;
   if (a.released_at) return { cls:'b-client', label:'With the client' };
   if (a.qc_status === 'approved') return { cls:'b-ready', label:'QC approved · releases ' + ausDate(r.review_on) };
@@ -3297,7 +3299,11 @@ function itemCard(r, staff){
             + '<button class="notebtn wpbtn" type="button" data-wpcopy="'+id+'" title="See the post and its HTML, then copy it for a WordPress Custom HTML block">View &amp; copy HTML</button>' : '')
       + (staff && ARTICLES[r.id] && li
           ? '<button class="notebtn wpbtn" type="button" data-lipack="'+id+'" title="Article ready to paste, banner, meta and promo post">LinkedIn pack</button>' : '')
-      + link(r.doc_url, '', 'Draft') + link(r.live_url, 'live', isPage(r) ? 'View page' : 'Live')
+      // One-off (Jhen 15/10/2026): a blog written in Google Docs opens its doc from Read & comment.
+      + (r.stream === 'blog' && r.doc_url && !ARTICLES[r.id]
+          ? '<a class="notebtn readbtn" href="'+esc(r.doc_url)+'" target="_blank" rel="noopener">Read &amp; comment</a>'
+          : link(r.doc_url, '', 'Draft'))
+      + link(r.live_url, 'live', isPage(r) ? 'View page' : 'Live')
       // Pages are built noindexed for the client to review. After approval the delivery team
       // removes the noindex and presses this, which is what moves the page to Live.
       + (staff && isPage(r) && r.approved && r.live_url && r.client_status !== 'live'
