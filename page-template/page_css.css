@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&family=Permanent+Marker&display=swap');
+/* SHU Restaurant, Squarespace 7.1 location page template (vegan-restaurant-kensington, captured 11/11/2026).
+   Palette from site.css: accent #ee7d7d, lightAccent #ffc5c5, darkAccent #5f183b, black #282828.
+   Heading font on the live site is Adobe "flood-std" (Typekit, not loadable here); Permanent Marker stands in. */
+.pgframe .su-sec,.pgframe .suh,.pgframe .suf{--su-coral:#ee7d7d;--su-pink:#ffc5c5;--su-maroon:#5f183b;--su-ink:#282828;--su-hf:'flood-std','Permanent Marker',cursive;--su-pad:4cqi;font-family:'Montserrat',system-ui,sans-serif;color:var(--su-ink);line-height:1.7;box-sizing:border-box}
+.pgframe .su-sec *,.pgframe .suh *,.pgframe .suf *{box-sizing:border-box}
+.pgframe .su-sec img,.pgframe .suh img,.pgframe .suf img{margin:0;border-radius:0;max-width:100%;display:block}
+.pgframe .su-sec{padding:6.6cqi var(--su-pad);background:#fff}
+.pgframe .su-sec h1,.pgframe .su-sec h2,.pgframe .su-sec h3{font-family:var(--su-hf);font-weight:400;line-height:1.2;margin:0}
+.pgframe .su-sec p{font-size:clamp(13px,calc(16px - .24cqi),15px);margin:0 0 1em}
+.pgframe .su-sec a{color:inherit}
+.pgframe .su-sec p a{color:var(--su-coral)}
+/* headings, mapped to the live type scale */
+.pgframe .su-big{font-size:clamp(34px,calc(3.6cqi + 16px),72px);text-align:center}
+.pgframe .su-h4{font-size:clamp(20px,calc(.72cqi + 16px),27px);font-weight:700;margin:0 0 .6em}
+.pgframe .su-sec h2.su-h4{font-family:var(--su-hf);font-weight:700}
+/* buttons: square, flood-std 1.25rem */
+.pgframe a.su-btn{display:inline-block;font-family:var(--su-hf);font-size:20px;letter-spacing:.02em;line-height:1.2;padding:16px 21px;border-radius:0;text-decoration:none;background:var(--su-coral);color:#fff;text-align:center}
+.pgframe a.su-btn-s{font-size:17px;padding:13px 18px}
+.pgframe a.su-btn-w{background:#fff;color:var(--su-coral)}
+/* 1 hero: black theme, photo with 70% overlay */
+.pgframe .su-hero{position:relative;overflow:hidden;background:var(--su-ink);color:#fff;min-height:clamp(340px,52cqi,620px);display:flex;align-items:center;justify-content:center;padding:clamp(70px,12cqi,160px) var(--su-pad)}
+.pgframe .su-hero .su-bg{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:.3}
+.pgframe .su-hero-in{position:relative;text-align:center;max-width:1500px;width:100%}
+.pgframe .su-hero h1{color:#fff;font-size:clamp(34px,calc(3.6cqi + 16px),72px);text-align:center;margin:0 0 clamp(24px,3cqi,40px)}
+/* 2 intro and 5 explore: image + text split */
+.pgframe .su-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4.2cqi,64px);align-items:stretch;max-width:1500px;margin:0 auto}
+.pgframe .su-split .su-img{width:100%;height:100%;min-height:clamp(260px,30cqi,460px);object-fit:cover}
+.pgframe .su-split .su-txt{align-self:center}
+.pgframe .su-txt .su-btn{margin-top:.4em}
+.pgframe .su-explore .su-txt{order:-1}
+/* 3 dining options: light theme (pink), white cards */
+.pgframe .su-opts{background:var(--su-pink)}
+.pgframe .su-opts-title{font-size:clamp(40px,calc(5.4cqi + 16px),96px);text-align:center;margin:0 0 clamp(30px,4.5cqi,70px)}
+.pgframe .su-cards{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1500px}
+.pgframe .su-cards li{background:#fff;display:flex;flex-direction:column;margin:0;padding:0}
+.pgframe .su-cards img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pgframe .su-card-b{padding:clamp(18px,2.4cqi,34px);display:flex;flex-direction:column;flex:1}
+.pgframe .su-cards h3{font-size:clamp(24px,calc(.9cqi + 16px),29px);margin:0 0 .5em}
+.pgframe .su-cards p{font-size:16px;flex:1}
+.pgframe .su-cards a.su-btn{align-self:flex-start;font-size:16px;padding:14px 20px}
+/* 4 reservation: radial gradient pink to coral */
+.pgframe .su-res{background:radial-gradient(circle at 50% 50%,var(--su-pink) 0,var(--su-coral) 70%)}
+.pgframe .su-res-in{max-width:960px;margin:0 auto}
+.pgframe .su-res .su-big{margin:0 0 .4em}
+.pgframe .su-res h3{font-family:var(--su-hf);font-size:clamp(20px,calc(.72cqi + 16px),27px);text-align:center;margin:0 0 1em}
+.pgframe .su-res ul{margin:0 0 2em;padding:0 0 0 1.3em}
+.pgframe .su-res li p{font-size:16px;margin:0 0 .6em}
+.pgframe .su-ot{background:#fff;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:0;border:1px solid #d8d9db}
+.pgframe .su-ot span{padding:14px 16px;font-size:14px;color:#2d333f;border-right:1px solid #d8d9db;display:flex;flex-direction:column;line-height:1.3}
+.pgframe .su-ot span small{font-size:11px;color:#6f737b;font-weight:600}
+.pgframe .su-ot a.su-ot-go{text-decoration:none;background:#da3743;color:#fff;font-weight:700;justify-content:center;border:0;padding:14px 28px}
+/* 6 gift: bright theme (coral), white button */
+.pgframe .su-gift{background:var(--su-coral);color:#fff;text-align:center}
+.pgframe .su-gift-in{max-width:1100px;margin:0 auto}
+.pgframe .su-gift h2{color:#fff;margin:0 0 .4em}
+.pgframe .su-gift p{font-size:16px;color:#fff;margin:0 0 1.6em}
+/* 7 FAQ: centred accordion, plus icon right, divider lines */
+.pgframe .su-faq-in{max-width:1150px;margin:0 auto}
+.pgframe .su-faq .su-big{margin:0 0 .6em}
+.pgframe .su-faq details{border-top:1px solid var(--su-ink);margin:0}
+.pgframe .su-faq details:last-of-type{border-bottom:1px solid var(--su-ink)}
+.pgframe .su-faq summary{list-style:none;cursor:pointer;position:relative;padding:22px 44px;text-align:center;font-family:var(--su-hf);font-size:clamp(19px,calc(.72cqi + 15px),26px);line-height:1.25}
+.pgframe .su-faq summary::-webkit-details-marker{display:none}
+.pgframe .su-faq summary:before,.pgframe .su-faq summary:after{content:'';position:absolute;right:6px;top:50%;width:18px;height:1px;background:var(--su-ink)}
+.pgframe .su-faq summary:after{transform:rotate(90deg);transition:transform .2s}
+.pgframe .su-faq details[open] summary:after{transform:rotate(0)}
+.pgframe .su-faq details p{text-align:center;font-size:16px;padding:0 44px 18px;margin:0}
+/* 8 map */
+.pgframe .su-map{padding:1.65cqi var(--su-pad)}
+.pgframe .su-map iframe{display:block;width:100%;height:430px;border:0}
+/* header: announcement bar + white bar, logo left, nav right */
+.pgframe .suh-ann{background:#ee7d7d;color:#fff;font-family:'Roboto Mono',monospace;font-size:14px;font-weight:700;text-align:center;padding:10px 16px;line-height:1.4}
+.pgframe .suh-main{background:#fff;display:flex;align-items:center;gap:24px;padding:2cqi 4cqi;max-width:1600px;margin:0 auto}
+.pgframe .suh-main img{height:clamp(44px,5cqi,70px);width:auto;margin-right:auto}
+.pgframe .suh-main nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 1.6cqi;font-family:'Roboto Mono',monospace;font-weight:700;font-size:16px;line-height:2;color:#282828}
+.pgframe .suh-book{background:#ee7d7d;color:#fff;font-family:'Montserrat',sans-serif;font-weight:600;font-size:14.4px;letter-spacing:.02em;padding:15px 22px;white-space:nowrap}
+.pgframe .suh-burger{display:none;color:#282828}
+.pgframe .suh-burger svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:2}
+/* footer: dark theme (maroon) */
+.pgframe .suf{background:#5f183b;color:#fff;padding:3.3cqi 4cqi 2cqi}
+.pgframe .suf-grid{display:grid;grid-template-columns:1.25fr 1fr 1.5fr 2.25fr;grid-template-areas:"logo links contact form" "hours links follow form" "copy copy copy copy";gap:20px 2cqi;max-width:1500px;margin:0 auto}
+.pgframe .suf h4{font-family:var(--su-hf);font-weight:400;font-size:clamp(20px,calc(.72cqi + 16px),27px);line-height:1.2;margin:0 0 .5em;color:#fff}
+.pgframe .suf p{font-size:13.5px;margin:0 0 .35em;line-height:1.7;color:#fff}
+.pgframe .suf-logo{grid-area:logo}.pgframe .suf-logo img{width:100%;max-width:230px;height:auto}
+.pgframe .suf-hours{grid-area:hours}.pgframe .suf-links{grid-area:links}.pgframe .suf-contact{grid-area:contact}.pgframe .suf-follow{grid-area:follow}
+.pgframe .suf-soc{display:flex;gap:16px}
+.pgframe .suf-soc svg{width:22px;height:22px;fill:#fff}
+.pgframe .suf-form{grid-area:form;background:#fff;color:#2c3345;padding:22px;font-family:'Inter','Montserrat',sans-serif;align-self:start}
+.pgframe .suf-form p{color:#2c3345;font-size:14px}
+.pgframe .suf-in{display:block;border:1px solid #d1d5db;border-radius:3px;padding:10px 12px;font-size:14px;color:#8b8b8b;margin:6px 0 14px}
+.pgframe .suf-lbl{display:block;font-size:14px;font-weight:600;color:#2c3345;margin:10px 0 0}
+.pgframe .suf-go{display:block;background:#ee7d7d;color:#fff;text-align:center;font-weight:600;font-size:15px;padding:12px;border-radius:3px}
+.pgframe .suf-copy{grid-area:copy;text-align:center;padding-top:10px}
+.pgframe .suf-copy p{font-size:12.5px}
+@container (max-width:760px){
+ .pgframe .su-sec{--su-pad:6cqi;padding-top:44px;padding-bottom:44px}
+ .pgframe .su-hero{min-height:420px;padding-top:80px;padding-bottom:80px}
+ .pgframe .su-hero h1,.pgframe .su-big{font-size:40px}
+ .pgframe .su-opts-title{font-size:40px}
+ .pgframe .su-split{grid-template-columns:1fr}
+ .pgframe .su-split .su-img{min-height:0;height:auto;aspect-ratio:4/3}
+ .pgframe .su-explore .su-txt{order:0}
+ .pgframe .su-txt .su-btn{display:block}
+ .pgframe .su-cards{grid-template-columns:1fr}
+ .pgframe .su-ot{grid-template-columns:1fr}
+ .pgframe .su-ot span{border-right:0;border-bottom:1px solid #d8d9db}
+ .pgframe .su-faq summary{padding:18px 34px 18px 8px}
+ .pgframe .su-faq details p{padding:0 8px 16px}
+ .pgframe .su-map iframe{height:320px}
+ .pgframe .suh-ann{font-size:12px}
+ .pgframe .suh-main{padding:12px 6cqi}
+ .pgframe .suh-main nav,.pgframe .suh-book{display:none}
+ .pgframe .suh-main img{height:52px}
+ .pgframe .suh-burger{display:block}
+ .pgframe .suf{padding:36px 6cqi 20px}
+ .pgframe .suf-grid{grid-template-columns:1fr;grid-template-areas:"logo" "follow" "form" "links" "hours" "contact" "copy";gap:26px}
+ .pgframe .suf-logo{justify-self:center}
+}
