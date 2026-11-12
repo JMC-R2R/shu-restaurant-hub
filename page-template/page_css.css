@@ -117,3 +117,7 @@
  .pgframe .suf-grid{grid-template-columns:1fr;grid-template-areas:"logo" "follow" "form" "links" "hours" "contact" "copy";gap:26px}
  .pgframe .suf-logo{justify-self:center}
 }
+
+/* Embed stills (12/11/2026): live maps, video and tour replaced by snapshots for the mockup */
+.pgframe a.pg-snap{display:block;text-decoration:none}
+.pgframe .su-map img{display:block;width:100%;height:auto;aspect-ratio:1200/450;object-fit:cover;max-width:none}
